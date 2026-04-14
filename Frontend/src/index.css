@@ -1,0 +1,217 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-hostel-primary: #0d4f8b;
+  --color-hostel-secondary: #1a6bb3;
+  --color-hostel-accent: #c41e3a;
+  --color-hostel-cream: #f8f4e8;
+  --color-hostel-gold: #c9a227;
+  --color-hms-sidebar-start: #1e3a5f;
+  --color-hms-sidebar-end: #2563eb;
+  --color-hms-nav-active: #3b82f6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+}
+
+.dark body {
+  background-color: #020617;
+}
+
+/* ─── Dark theme: inner page content (everything inside layout <main>) ─── */
+.dark main .bg-white {
+  background-color: rgb(30 41 59);
+}
+
+.dark main .bg-slate-50 {
+  background-color: rgb(15 23 42 / 0.55);
+}
+
+.dark main .bg-slate-100 {
+  background-color: rgb(30 41 59);
+}
+
+.dark main .bg-slate-200 {
+  background-color: rgb(51 65 85);
+}
+
+.dark main .hover\:bg-slate-50:hover {
+  background-color: rgb(51 65 85 / 0.45);
+}
+
+.dark main .hover\:bg-slate-100:hover {
+  background-color: rgb(51 65 85);
+}
+
+.dark main .hover\:bg-slate-300:hover {
+  background-color: rgb(71 85 105);
+}
+
+.dark main .border-slate-100,
+.dark main .border-slate-200 {
+  border-color: rgb(51 65 85);
+}
+
+.dark main .border-slate-300 {
+  border-color: rgb(71 85 105);
+}
+
+.dark main .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgb(51 65 85);
+}
+
+.dark main .text-slate-900,
+.dark main .text-slate-800 {
+  color: rgb(241 245 249);
+}
+
+.dark main .text-slate-700 {
+  color: rgb(203 213 225);
+}
+
+.dark main .text-slate-600 {
+  color: rgb(148 163 184);
+}
+
+.dark main .text-slate-500 {
+  color: rgb(148 163 184);
+}
+
+.dark main .text-slate-400 {
+  color: rgb(148 163 184);
+}
+
+.dark main .border-white {
+  border-color: rgb(51 65 85);
+}
+
+
+/* Light gradient headers / panels → solid dark surfaces */
+.dark main .bg-gradient-to-r.from-blue-50.to-cyan-50,
+.dark main .bg-gradient-to-r.from-purple-50.to-pink-50 {
+  background-image: linear-gradient(to right, rgb(30 41 59), rgb(30 41 59));
+}
+
+.dark main .bg-gradient-to-r.from-slate-50.to-slate-100 {
+  background-image: linear-gradient(to right, rgb(15 23 42 / 0.85), rgb(30 41 59));
+}
+
+.dark main .bg-gradient-to-br.from-white.to-slate-50,
+.dark main .bg-gradient-to-br.from-blue-50.to-blue-100,
+.dark main .bg-gradient-to-br.from-green-50.to-green-100,
+.dark main .bg-gradient-to-br.from-red-50.to-red-100 {
+  background-image: linear-gradient(to bottom right, rgb(30 41 59), rgb(30 41 59));
+}
+
+.dark main .border-blue-200 {
+  border-color: rgb(59 130 246 / 0.35);
+}
+
+.dark main .border-green-200 {
+  border-color: rgb(34 197 94 / 0.35);
+}
+
+.dark main .border-red-200 {
+  border-color: rgb(248 113 113 / 0.35);
+}
+
+/* Form controls */
+.dark main input:not([type='checkbox']):not([type='radio']):not([type='file']):not([type='submit']):not([type='button']),
+.dark main textarea,
+.dark main select {
+  background-color: rgb(15 23 42);
+  color: rgb(241 245 249);
+  border-color: rgb(71 85 105);
+}
+
+.dark main input::placeholder,
+.dark main textarea::placeholder {
+  color: rgb(100 116 139);
+}
+
+.dark main select option {
+  background-color: rgb(15 23 42);
+  color: rgb(241 245 249);
+}
+
+/* Read-only / disabled-looking fields often use bg-slate-50 — already mapped above */
+.dark main input[readonly],
+.dark main textarea[readonly] {
+  background-color: rgb(30 41 59);
+  color: rgb(203 213 225);
+}
+
+/* Status / alert surfaces */
+.dark main .bg-green-50 {
+  background-color: rgb(20 83 45 / 0.22);
+}
+
+.dark main .bg-red-50 {
+  background-color: rgb(127 29 29 / 0.25);
+}
+
+.dark main .text-green-600,
+.dark main .text-green-700,
+.dark main .text-green-800 {
+  color: rgb(134 239 172);
+}
+
+.dark main .text-red-600,
+.dark main .text-red-700,
+.dark main .text-red-800 {
+  color: rgb(252 165 165);
+}
+
+.dark main .text-amber-600,
+.dark main .text-amber-700,
+.dark main .text-amber-800 {
+  color: rgb(253 230 138);
+}
+
+.dark main .bg-amber-100 {
+  background-color: rgb(120 53 15 / 0.4);
+}
+
+.dark main .bg-green-100 {
+  background-color: rgb(20 83 45 / 0.35);
+}
+
+.dark main .bg-red-100 {
+  background-color: rgb(127 29 29 / 0.35);
+}
+
+.dark main .bg-teal-100 {
+  background-color: rgb(19 78 74 / 0.4);
+}
+
+.dark main .bg-purple-100 {
+  background-color: rgb(88 28 135 / 0.4);
+}
+
+.dark main .text-teal-800,
+.dark main .text-purple-800 {
+  color: rgb(204 251 241);
+}
+
+.dark main .text-orange-600 {
+  color: rgb(253 186 116);
+}
+
+.dark main .text-blue-600,
+.dark main .text-blue-700 {
+  color: rgb(147 197 253);
+}
+
+.dark main .text-blue-500 {
+  color: rgb(96 165 250);
+}
+
