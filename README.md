@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -19,3 +20,7 @@ If you are developing a production application, we recommend using TypeScript wi
 # web_application_residential_facility_administration
 A web-based Residential Facility Administration system that automates hostel management tasks like student registration, room allocation, mess billing, outings, and complaints. Built with React.js, Node.js, and MySQL, it provides efficient data management and role-based access through a centralized platform.
 >>>>>>> f6fc84f70af5c1029d4aa84c0fe834aea719700e
+=======
+# hms_project
+A web-based Hostel Management System developed to automate and simplify residential facility administration, including student management, room allocation, mess billing, outing requests, and complaint handling using React.js, Node.js, and MySQL.
+>>>>>>> f0386ef46d1f2ce68aa771111967dd527a7cfa7e
